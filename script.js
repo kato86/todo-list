@@ -1,28 +1,30 @@
-let todos = ['item 1', 'item 2', 'item 3', 'item 4'];
+let todoList = {
+    todos: ['item 1', 'item 2', 'item 3', 'item 4'],
+    displayTodos: function() {
+        console.log('My Todos: ', this.todos);
+    }
+};
 
-function displayTodos() {
-    console.log('My todos: ', todos);
-}
+console.log(todoList);
+console.log(todoList.displayTodos());
 
-displayTodos(); // item 1, item 2, item 3, item 4
+// function addTodo(todo) {
+//     todos.push(todo);
+//     displayTodos();
+// }
 
-function addTodo(todo) {
-    todos.push(todo);
-    displayTodos();
-}
+// addTodo('item 5'); // item 1, item 2, item 3, item 4, item 5
 
-addTodo('item 5'); // item 1, item 2, item 3, item 4, item 5
+// function changeTodo(position, newValue) {
+//     todos[position] = newValue;
+//     displayTodos();
+// }
 
-function changeTodo(position, newValue) {
-    todos[position] = newValue;
-    displayTodos();
-}
+// changeTodo(0, 'new item 1'); // new item 1, item 2, item 3, item 4, item 5
 
-changeTodo(0, 'new item 1'); // new item 1, item 2, item 3, item 4, item 5
+// function deleteTodo(position) {
+//     todos.splice(position, 1);
+//     displayTodos();
+// }
 
-function deleteTodo(position) {
-    todos.splice(position, 1);
-    displayTodos();
-}
-
-deleteTodo(-1);  // new item 1, item 2, item 3, item 4, item 5
+// deleteTodo(-1);  // new item 1, item 2, item 3, item 4, item 5

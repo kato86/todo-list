@@ -6,7 +6,11 @@ let todoList = {
         } else {
             console.log('My Todos:');
             for (let i = 0; length = this.todos.length, i < length; i++) {
-                console.log(this.todos[i].todoText);
+                if (this.todos[i].complete === true) {
+                    console.log(`[x] ${this.todos[i].todoText}`);
+                } else {
+                    console.log(`[ ] ${this.todos[i].todoText}`);
+                }
             }
         }
     },

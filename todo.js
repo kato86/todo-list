@@ -19,3 +19,10 @@ function changeTodo(position, newValue) {
 }
 
 changeTodo(0, 'new item 1');
+
+function deleteTodo(position) {
+    todos.splice(position, 1);
+    displayTodos();
+}
+
+deleteTodo(-1);  // item 5

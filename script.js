@@ -48,6 +48,10 @@ let todoList = {
             for (let i = 0; i < totalTodos; i++) {
                 this.todos[i].complete = false;
             }
+        } else {
+            for (let i = 0; i < totalTodos; i++) {
+                this.todos[i].complete = true;
+            }
         }
 
         this.displayTodos();

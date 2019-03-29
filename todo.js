@@ -12,3 +12,10 @@ function addTodo(todo) {
 }
 
 addTodo('item 5');
+
+function changeTodo(position, newValue) {
+    todos[position] = newValue;
+    displayTodos();
+}
+
+changeTodo(0, 'new item 1');

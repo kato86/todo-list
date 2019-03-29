@@ -6,23 +6,25 @@ let todoList = {
     addTodo: function(todo) {
         this.todos.push(todo);
         this.displayTodos();
+    },
+    changeTodo: function(position, newValue) {
+        this.todos[position] = newValue;
+        this.displayTodos();
     }
 };
 
 console.log(todoList.addTodo('item 5'));
+console.log(todoList.changeTodo(0, 'new item 1'));
 
-// addTodo('item 5'); // item 1, item 2, item 3, item 4, item 5
 
 // function changeTodo(position, newValue) {
 //     todos[position] = newValue;
 //     displayTodos();
 // }
 
-// changeTodo(0, 'new item 1'); // new item 1, item 2, item 3, item 4, item 5
 
 // function deleteTodo(position) {
 //     todos.splice(position, 1);
 //     displayTodos();
 // }
 
-// deleteTodo(-1);  // new item 1, item 2, item 3, item 4, item 5

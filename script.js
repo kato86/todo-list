@@ -10,21 +10,9 @@ let todoList = {
     changeTodo: function(position, newValue) {
         this.todos[position] = newValue;
         this.displayTodos();
+    },
+    deleteTodo: function(position) {
+        this.todos.splice(position, 1);
+        this.displayTodos();
     }
 };
-
-console.log(todoList.addTodo('item 5'));
-console.log(todoList.changeTodo(0, 'new item 1'));
-
-
-// function changeTodo(position, newValue) {
-//     todos[position] = newValue;
-//     displayTodos();
-// }
-
-
-// function deleteTodo(position) {
-//     todos.splice(position, 1);
-//     displayTodos();
-// }
-

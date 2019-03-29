@@ -5,3 +5,10 @@ function displayTodos() {
 }
 
 displayTodos();
+
+function addTodo(todo) {
+    todos.push(todo);
+    displayTodos();
+}
+
+addTodo('item 5');

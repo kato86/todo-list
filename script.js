@@ -70,7 +70,7 @@ let view = {
     displayTodos: function() {
         let todoUl = document.querySelector('ul');
         todoUl.innerHTML = '';
-        todoList.todos.forEach(function(todo, position) {
+        todoList.todos.forEach((todo, position) => {
             let todoLi = document.createElement('li');
             let todoTextWidthCompletion = '';
 
@@ -84,7 +84,7 @@ let view = {
             todoLi.textContent = todoTextWidthCompletion;
             todoLi.appendChild(this.createDeleteButton());
             todoUl.appendChild(todoLi);
-        }, this)
+        })
     },
     createDeleteButton: function() {
         let deleteButton = document.createElement('button');

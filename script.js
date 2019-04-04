@@ -70,9 +70,8 @@ let view = {
     displayTodos: function() {
         let todoUl = document.querySelector('ul');
         todoUl.innerHTML = '';
-        for (let i = 0; i < todoList.todos.length; i++) {
+        todoList.todos.forEach(function(todo, position) {
             let todoLi = document.createElement('li');
-            let todo = todoList.todos[i];
             let todoTextWidthCompletion = '';
 
             if (todo.complete === true) {
@@ -81,11 +80,11 @@ let view = {
                 todoTextWidthCompletion = '[ ] ' + todo.todoText;
             }
 
-            todoLi.id = i;
+            todoLi.id = position;
             todoLi.textContent = todoTextWidthCompletion;
             todoLi.appendChild(this.createDeleteButton());
             todoUl.appendChild(todoLi);
-        }
+        }, this)
     },
     createDeleteButton: function() {
         let deleteButton = document.createElement('button');

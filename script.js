@@ -87,6 +87,7 @@ let view = {
             }
 
             todoLi.textContent = todoTextWidthCompletion;
+            todoLi.appendChild(this.createDeleteButton());
             todoUl.appendChild(todoLi);
         }
     },
